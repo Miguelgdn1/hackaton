@@ -1,18 +1,23 @@
 package codigo;
+
 import java.util.List;
+import java.util.ArrayList;
 
 public class Apresentacoes {
     private Apresentacao instance;
-    private List<Apresentacao> apresentacoes;
+    private List<Projeto> projetos;
 
     // Construtor padrão
     public Apresentacoes() {
         this.instance = null;
-        this.apresentacoes = new java.util.ArrayList<>();
+        projetos = new ArrayList<>();
     }
 
     // Getters e Setters
     public Apresentacao getInstance() {
+        if (instance == null) {
+            instance = new Apresentacao();
+        }
         return instance;
     }
 
@@ -20,15 +25,15 @@ public class Apresentacoes {
         this.instance = instance;
     }
 
-    public List<Apresentacao> getApresentacoes() {
-        return apresentacoes;
+    public List<Projeto> getProjetos() {
+        return projetos;
     }
 
-    public void setApresentacoes(List<Apresentacao> apresentacoes) {
-        this.apresentacoes = apresentacoes;
+    public void setProjetos(List<Projeto> projetos) {
+        this.projetos = projetos;
     }
 
-    public void addApresentacao(){
-        apresentacoes.add(instance);
+    public void addProjeto(Projeto projeto){
+        projetos.add(projeto);
     }
 }

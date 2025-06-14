@@ -4,6 +4,10 @@ public class Equipe {
     private List<Estudante> membros;
     private String nome;
 
+    public Equipe() {
+    
+    }
+
     public Equipe(String nome, List<Estudante> membros){
         this.nome = nome;
         this.membros = membros;

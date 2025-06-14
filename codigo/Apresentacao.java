@@ -7,6 +7,9 @@ public class Apresentacao {
     private Sala local;
     private LocalDateTime dataHora;
 
+    public Apresentacao(){
+
+    }
     public Apresentacao(Projeto projeto, IAvaliavel banca, Sala local, LocalDateTime dataHora) {
         this.projeto = projeto;
         this.banca = banca;
